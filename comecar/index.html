@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#8B3041">
+
+  <title>Clínica 3m's — Damos o primeiro passo contigo</title>
+  <meta name="description" content="Que bom teres chegado. Falamos contigo no WhatsApp e indicamos a terapeuta certa da nossa equipa. Sem formulários complicados.">
+  <link rel="canonical" href="https://clinica3ms.pt/comecar/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="Clínica 3m's">
+  <meta property="og:title" content="Clínica 3m's — Damos o primeiro passo contigo">
+  <meta property="og:description" content="Falamos contigo no WhatsApp e indicamos a terapeuta certa da nossa equipa.">
+  <meta property="og:url" content="https://clinica3ms.pt/comecar/">
+  <meta property="og:image" content="https://clinica3ms.pt/images/favicon-180.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="../images/favicon-180.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+
+  <!-- TODO: <meta name="google-site-verification" content="..."> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    :root {
+      --bg-white:     #FFFFFF;
+      --bg-cream:     #FAF6F3;
+      --bg-stone:     #E3DAD5;
+      --rose:         #B8435A;
+      --rose-dk:      #8B3041;
+      --ink-900:      #1A1A1A;
+      --ink-700:      #2C2C2A;
+      --ink-500:      #5F5E5A;
+      --ink-300:      #888780;
+      --ink-200:      #B4B2A9;
+      --border-soft:  rgba(139, 48, 65, 0.12);
+      --border-mid:   rgba(139, 48, 65, 0.25);
+      --green-wa:     #1FA855;
+      --green-wa-dk:  #178A43;
+      --green-check:  #0F6E56;
+      --font-display: "Fraunces", "Georgia", serif;
+      --font-body:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --radius-md:    10px;
+      --radius-lg:    16px;
+      --radius-pill:  999px;
+      --max-width:    1080px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--ink-700);
+      background: var(--bg-white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* === TOP BAR === */
+    .topbar { background: var(--bg-white); border-bottom: 1px solid var(--border-soft); }
+    .topbar__inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 0; gap: 16px; flex-wrap: wrap;
+    }
+    .brand {
+      font-family: var(--font-display); font-size: 19px; font-weight: 500;
+      color: var(--ink-900); letter-spacing: -0.01em;
+    }
+    .brand em { color: var(--rose); font-style: italic; font-weight: 500; }
+    .topbar__creds {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 12px; color: var(--ink-500);
+    }
+    .topbar__creds svg { color: var(--green-check); flex-shrink: 0; }
+
+    /* === HERO === */
+    .hero { padding: 5rem 0 4.5rem; text-align: center; background: var(--bg-white); }
+    .hero__eyebrow {
+      font-size: 11px; color: var(--rose); letter-spacing: 2px;
+      text-transform: uppercase; font-weight: 500; margin-bottom: 22px;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5.5vw, 52px); font-weight: 400;
+      line-height: 1.1; letter-spacing: -0.02em;
+      color: var(--ink-900); max-width: 820px; margin: 0 auto 20px;
+    }
+    .hero h1 em { color: var(--rose); font-style: italic; font-weight: 500; }
+    .hero__rule {
+      width: 40px; height: 1px; background: var(--rose); margin: 0 auto 24px;
+    }
+    .hero__lede {
+      font-size: clamp(15px, 2vw, 17px); color: var(--ink-500);
+      line-height: 1.7; max-width: 560px; margin: 0 auto 36px;
+    }
+
+    /* === CTA WHATSAPP === */
+    .cta-wa {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--green-wa); color: white;
+      padding: 16px 32px; border-radius: var(--radius-pill);
+      font-size: 16px; font-weight: 600;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 14px rgba(31, 168, 85, 0.25);
+    }
+    .cta-wa:hover {
+      background: var(--green-wa-dk); transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(31, 168, 85, 0.35);
+    }
+    .cta-wa svg { width: 22px; height: 22px; }
+    .cta-wa__note {
+      margin-top: 14px; font-size: 12px; color: var(--ink-300);
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .cta-wa__note svg { width: 12px; height: 12px; }
+
+    /* === SECTIONS === */
+    section { padding: 4.5rem 0; }
+    .section-eyebrow {
+      font-size: 11px; color: var(--rose); letter-spacing: 2px;
+      text-transform: uppercase; font-weight: 500;
+      margin-bottom: 10px; text-align: center;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 4vw, 38px); font-weight: 400;
+      line-height: 1.2; color: var(--ink-900);
+      text-align: center; letter-spacing: -0.01em; margin-bottom: 14px;
+    }
+    .section-title em { color: var(--rose); font-style: italic; font-weight: 500; }
+    .section-sub {
+      text-align: center; font-size: 15px; color: var(--ink-500);
+      max-width: 560px; margin: 0 auto 36px; line-height: 1.7;
+    }
+
+    /* === REASONS === */
+    .reasons { background: var(--bg-cream); }
+    .reasons-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+      max-width: 860px; margin: 0 auto;
+    }
+    .reason {
+      background: var(--bg-white); border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md); padding: 20px;
+      display: flex; gap: 14px; align-items: flex-start;
+    }
+    .reason__icon {
+      width: 38px; height: 38px; flex-shrink: 0;
+      background: var(--bg-stone); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--rose-dk);
+    }
+    .reason__icon svg { width: 20px; height: 20px; }
+    .reason h3 {
+      font-family: var(--font-display); font-size: 16px; font-weight: 500;
+      color: var(--ink-900); margin-bottom: 3px; letter-spacing: -0.005em;
+    }
+    .reason p { font-size: 13px; color: var(--ink-500); line-height: 1.55; }
+    .reasons-note {
+      text-align: center; font-size: 15px; color: var(--ink-300);
+      margin-top: 28px; font-family: var(--font-display); font-style: italic;
+    }
+
+    /* === EQUIPA — só foto + 1 linha === */
+    .equipa { background: var(--bg-white); }
+    .equipa-photo {
+      aspect-ratio: 3.25 / 1; border-radius: var(--radius-lg);
+      margin: 0 auto 24px; overflow: hidden; background: var(--bg-stone);
+      max-width: 960px;
+    }
+    .equipa-photo img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .equipa__quote {
+      text-align: center; max-width: 620px; margin: 0 auto;
+      font-family: var(--font-display); font-size: clamp(16px, 2vw, 19px);
+      line-height: 1.5; color: var(--ink-700); font-style: italic;
+    }
+    .equipa__quote .accent {
+      color: var(--rose); font-weight: 500;
+    }
+    .equipa__byline {
+      text-align: center; font-size: 12px; color: var(--ink-300);
+      margin-top: 14px; letter-spacing: 0.5px;
+    }
+
+    /* === PROVA SOCIAL — secção compacta com tudo === */
+    .proof { background: var(--bg-cream); }
+    .stats {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+      max-width: 760px; margin: 0 auto 36px; text-align: center;
+    }
+    .stat__num {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 4.5vw, 38px); font-weight: 400;
+      color: var(--rose-dk); line-height: 1; letter-spacing: -0.01em;
+    }
+    .stat__label {
+      font-size: 11px; color: var(--ink-500); line-height: 1.5; margin-top: 8px;
+    }
+    .stat + .stat { border-left: 1px solid var(--border-soft); }
+
+    .founder {
+      max-width: 560px; margin: 0 auto 28px;
+      padding-top: 28px; border-top: 1px solid var(--border-soft);
+      display: flex; gap: 16px; align-items: center; justify-content: center;
+    }
+    .founder__photo {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: var(--bg-stone); flex-shrink: 0;
+      background-size: cover; background-position: center;
+    }
+    .founder__text { text-align: left; }
+    .founder__name {
+      font-family: var(--font-display); font-size: 15px; font-weight: 500;
+      color: var(--ink-900); margin-bottom: 2px;
+    }
+    .founder__name em { color: var(--rose); font-style: italic; }
+    .founder__bio { font-size: 12px; color: var(--ink-500); line-height: 1.5; }
+
+    .media { text-align: center; margin-bottom: 36px; }
+    .media__label {
+      font-size: 10px; color: var(--ink-300);
+      letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .media__list {
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 16px;
+      font-size: 13px; color: var(--ink-500); font-weight: 500;
+      font-family: var(--font-display); font-style: italic;
+    }
+    .media__list .dot { color: var(--border-mid); font-style: normal; }
+
+    /* === FAQ inline curta === */
+    .faq-list {
+      max-width: 680px; margin: 0 auto;
+      padding-top: 36px; border-top: 1px solid var(--border-soft);
+      display: grid; gap: 8px;
+    }
+    .faq-item {
+      background: var(--bg-white); border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md); overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .faq-item:hover { border-color: var(--border-mid); }
+    .faq-item summary {
+      list-style: none; padding: 14px 18px; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary h3 {
+      font-family: var(--font-display); font-size: 15px; font-weight: 500;
+      color: var(--ink-900);
+    }
+    .faq-item summary svg {
+      width: 18px; height: 18px; color: var(--rose); flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    .faq-item[open] summary svg { transform: rotate(45deg); }
+    .faq-item__body {
+      padding: 0 18px 16px; font-size: 13px; color: var(--ink-500); line-height: 1.65;
+    }
+
+    /* === FINAL CTA — bordeaux === */
+    .final-cta {
+      background: var(--rose-dk); color: var(--bg-white);
+      text-align: center; padding: 5.5rem 0;
+      position: relative; overflow: hidden;
+    }
+    .final-cta::before {
+      content: "";
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(196, 68, 93, 0.18) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .final-cta .container { position: relative; z-index: 1; }
+    .final-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4.5vw, 40px); font-weight: 400;
+      color: var(--bg-white); line-height: 1.2;
+      margin-bottom: 14px; letter-spacing: -0.01em;
+    }
+    .final-cta h2 em { color: var(--bg-stone); font-style: italic; }
+    .final-cta p {
+      font-size: 15px; color: rgba(255, 255, 255, 0.85);
+      max-width: 480px; margin: 0 auto 28px; line-height: 1.7;
+    }
+    .final-cta__alt {
+      font-size: 12px; color: rgba(255, 255, 255, 0.7); margin-top: 16px;
+    }
+    .final-cta__alt a {
+      color: var(--bg-white); text-decoration: underline; font-weight: 500;
+    }
+    .final-cta__alt a:hover { color: var(--bg-stone); }
+
+    /* === FOOTER === */
+    footer {
+      background: var(--ink-900); color: var(--ink-200);
+      padding: 2rem 0 1.25rem;
+    }
+    .footer__inner {
+      display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem;
+      align-items: start; font-size: 13px;
+      padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer__brand strong {
+      color: var(--bg-white); font-weight: 500;
+      font-family: var(--font-display); font-size: 16px;
+    }
+    .footer__brand strong em { color: var(--rose); font-style: italic; }
+    .footer__brand-body {
+      margin-top: 8px; line-height: 1.7; font-size: 12px;
+    }
+    .footer__brand-body a { color: var(--ink-200); transition: color 0.2s; }
+    .footer__brand-body a:hover { color: var(--bg-white); }
+    .footer__brand-meta {
+      margin-top: 10px; font-size: 11px; color: var(--ink-300); line-height: 1.6;
+    }
+    .footer__social {
+      display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
+    }
+    .footer__social-label {
+      color: var(--ink-300); letter-spacing: 1px;
+      font-size: 10px; text-transform: uppercase;
+    }
+    .footer__ig {
+      display: inline-flex; align-items: center; gap: 7px;
+      color: var(--ink-200); transition: color 0.2s; font-size: 13px;
+    }
+    .footer__ig:hover { color: var(--bg-white); }
+    .footer__ig svg { width: 14px; height: 14px; }
+    .footer__legal {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      padding-top: 1rem; font-size: 11px; color: var(--ink-300);
+    }
+    .footer__legal a { color: var(--ink-300); transition: color 0.2s; }
+    .footer__legal a:hover { color: var(--bg-white); }
+    .footer__legal span { color: rgba(255,255,255,0.15); }
+
+    @media (max-width: 768px) {
+      section { padding: 3rem 0; }
+      .hero { padding: 2.5rem 0; }
+      .topbar__inner { gap: 10px; }
+      .reasons-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2, 1fr); gap: 22px; row-gap: 26px; }
+      .stat { border-left: none !important; }
+      .stat:nth-child(2), .stat:nth-child(4) { border-left: 1px solid var(--border-soft) !important; }
+      .footer__inner { grid-template-columns: 1fr; gap: 1.5rem; }
+      .cta-wa { padding: 14px 24px; font-size: 15px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- === 1. TOP BAR === -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a href="https://clinica3ms.pt" class="brand">Clínica <em>3m's</em></a>
+      <div class="topbar__creds">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          <path d="M9 12l2 2 4-4"></path>
+        </svg>
+        <span>Clínica licenciada ERS · Psicólogas OPP</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- === 2. HERO === -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="hero__eyebrow">Que bom teres chegado</div>
+      <h1 id="hero-title">
+        Encontramos contigo<br>
+        <em>a terapeuta certa</em> para o que sentes.
+      </h1>
+      <div class="hero__rule"></div>
+      <p class="hero__lede">
+        Sem formulários complicados. Sem criar conta. Apenas uma conversa por WhatsApp — para conhecermos o que procuras e indicarmos a profissional certa da nossa equipa.
+      </p>
+
+      <a href="https://wa.me/351915681207?text=Ol%C3%A1%2C%20cheguei%20at%C3%A9%20v%C3%B3s%20pelo%20Instagram.%20Gostava%20de%20marcar%20uma%20primeira%20conversa." class="cta-wa" target="_blank" rel="noopener" aria-label="Iniciar conversa no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
+        Falar connosco no WhatsApp
+      </a>
+      <div class="cta-wa__note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        Respondemos em poucas horas · Seg-Sex 9h30-19h
+      </div>
+    </div>
+  </section>
+
+  <!-- === 3. REASONS === -->
+  <section class="reasons" aria-labelledby="reasons-title">
+    <div class="container">
+      <div class="section-eyebrow">Talvez te ajude</div>
+      <h2 class="section-title" id="reasons-title">Estás aqui <em>porque...</em></h2>
+
+      <div class="reasons-grid">
+        <article class="reason">
+          <div class="reason__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M16 16s-1.5-2-4-2-4 2-4 2"></path>
+              <line x1="9" y1="9" x2="9.01" y2="9"></line>
+              <line x1="15" y1="9" x2="15.01" y2="9"></line>
+            </svg>
+          </div>
+          <div>
+            <h3>Sentes-te sobrecarregada</h3>
+            <p>Ansiedade, cansaço emocional, dificuldade em parar.</p>
+          </div>
+        </article>
+
+        <article class="reason">
+          <div class="reason__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 12h6"></path>
+              <path d="M12 9v6"></path>
+              <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3>A maternidade pesa-te</h3>
+            <p>Culpa, exaustão, dificuldade em ser quem queres ser.</p>
+          </div>
+        </article>
+
+        <article class="reason">
+          <div class="reason__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 11V7a3 3 0 016 0v4"></path>
+              <rect x="5" y="11" width="14" height="10" rx="2"></rect>
+            </svg>
+          </div>
+          <div>
+            <h3>Algo no teu filho preocupa-te</h3>
+            <p>Comportamento, emoções, escola, sono, medos.</p>
+          </div>
+        </article>
+
+        <article class="reason">
+          <div class="reason__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 00-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 010 7.75"></path>
+            </svg>
+          </div>
+          <div>
+            <h3>Há algo a desafiar a tua relação</h3>
+            <p>Casal, família, comunicação, distância.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="reasons-note">Ou outra coisa qualquer. Não tens de saber o que é — só tens de querer falar.</p>
+    </div>
+  </section>
+
+  <!-- === 4. EQUIPA — só foto + frase === -->
+  <section class="equipa" aria-labelledby="equipa-title">
+    <div class="container">
+      <div class="section-eyebrow">A nossa equipa</div>
+      <h2 class="section-title" id="equipa-title">18 mulheres. <em>Uma forma de cuidar.</em></h2>
+
+      <div class="equipa-photo">
+        <img src="images/equipa.jpg" alt="As 18 psicólogas clínicas da equipa da Clínica 3m's" loading="lazy">
+      </div>
+
+      <p class="equipa__quote">
+        Toda a equipa trabalha com o mesmo modelo <span class="accent">— o MAPA —</span> criado pela nossa fundadora. Significa que, independentemente da terapeuta que te acompanhe, a forma de cuidar é a mesma.
+      </p>
+      <p class="equipa__byline">
+        Psicólogas clínicas com cédula profissional pela Ordem dos Psicólogos Portugueses.
+      </p>
+    </div>
+  </section>
+
+  <!-- === 5. PROVA SOCIAL + FAQ === -->
+  <section class="proof" aria-label="Prova social e dúvidas">
+    <div class="container">
+      <div class="stats">
+        <div class="stat">
+          <div class="stat__num">37k+</div>
+          <div class="stat__label">famílias acompanham<br>a Tânia no Instagram</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">16k+</div>
+          <div class="stat__label">livros best-seller<br>vendidos</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">2016</div>
+          <div class="stat__label">ano em que a<br>clínica nasceu</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">18</div>
+          <div class="stat__label">psicólogas clínicas<br>na nossa equipa</div>
+        </div>
+      </div>
+
+      <div class="founder">
+        <div class="founder__photo" role="img" aria-label="Tânia Correia"></div>
+        <div class="founder__text">
+          <div class="founder__name">Clínica fundada por <em>Tânia Correia</em></div>
+          <div class="founder__bio">Psicóloga Clínica (OPP 24317) · Autora best-seller · Criadora do modelo MAPA</div>
+        </div>
+      </div>
+
+      <div class="media">
+        <div class="media__label">Falada em</div>
+        <div class="media__list">
+          <span>RTP1</span>
+          <span class="dot">·</span>
+          <span>TVI</span>
+          <span class="dot">·</span>
+          <span>Renascença</span>
+          <span class="dot">·</span>
+          <span>RFM</span>
+          <span class="dot">·</span>
+          <span>Revista Selfie</span>
+        </div>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>
+            <h3>Quanto custa uma consulta?</h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </summary>
+          <div class="faq-item__body">
+            Acompanhamento psicológico a partir de 60€ · 50min. Aceitamos MB WAY, multibanco, cartão e numerário. Todas as consultas são dedutíveis em IRS.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <h3>Posso fazer online?</h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </summary>
+          <div class="faq-item__body">
+            Sim, via Microsoft Teams — em português, inglês ou espanhol. Tão eficaz como presencial, em qualquer parte do mundo.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <h3>Como sei qual a terapeuta certa para mim?</h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </summary>
+          <div class="faq-item__body">
+            Conversamos contigo no WhatsApp e indicamos a profissional mais ajustada ao que partilhares.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- === 6. FINAL CTA === -->
+  <section class="final-cta" aria-labelledby="final-title">
+    <div class="container">
+      <h2 id="final-title">Pronto/a para o <em>primeiro passo?</em></h2>
+      <p>A tua existência é uma prioridade. O teu bem-estar é a nossa missão.</p>
+
+      <a href="https://wa.me/351915681207?text=Ol%C3%A1%2C%20cheguei%20at%C3%A9%20v%C3%B3s%20pelo%20Instagram.%20Gostava%20de%20marcar%20uma%20primeira%20conversa." class="cta-wa" target="_blank" rel="noopener" aria-label="Começar conversa no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
+        Começar conversa no WhatsApp
+      </a>
+
+      <div class="final-cta__alt">
+        Ou já decidi: <a href="https://portal.3msmeninamulhermae.pt/sign-up">marcar consulta diretamente no portal →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- === FOOTER === -->
+  <footer>
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <strong>Clínica <em>3m's</em></strong>
+        <div class="footer__brand-body">
+          Rua Alfredo Marceneiro, 12 Loja A · 2620-524 Ramada<br>
+          <a href="tel:+351915681207">+351 915 681 207</a> · <a href="mailto:geral@3msmeninamulhermae.pt">geral@3msmeninamulhermae.pt</a>
+        </div>
+        <div class="footer__brand-meta">
+          Seg–Sex 09:30–19:00 · NIPC 516377876 · ERS E170663/2024 · © 2026 Correia &amp; da Gama, Lda.
+        </div>
+      </div>
+
+      <div class="footer__social">
+        <span class="footer__social-label">Segue-nos</span>
+        <a href="https://www.instagram.com/3ms.clinica/" target="_blank" rel="noopener" class="footer__ig">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          @3ms.clinica
+        </a>
+        <a href="https://www.instagram.com/3ms.taniacorreia/" target="_blank" rel="noopener" class="footer__ig">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          @3ms.taniacorreia
+        </a>
+      </div>
+    </div>
+    <div class="container footer__legal">
+      <a href="https://clinica3ms.pt/politica-de-privacidade">Política de Privacidade</a>
+      <span>·</span>
+      <a href="https://clinica3ms.pt/termos-e-condicoes">Termos e Condições</a>
+      <span>·</span>
+      <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </footer>
+
+  <!-- TRACKING (Meta Pixel + GA4) -->
+  <!--
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'COLOCAR_AQUI_O_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+  <script>
+    document.querySelectorAll('.cta-wa').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'Lead', { source: 'whatsapp_button' });
+        }
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'whatsapp_click', { 'event_category': 'engagement' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
